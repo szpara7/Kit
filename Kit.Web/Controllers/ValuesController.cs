@@ -19,7 +19,7 @@ namespace Kit.Web.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<string> Get([FromQuery]int id)
         {
             return "value";
         }
@@ -38,7 +38,7 @@ namespace Kit.Web.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete([FromQuery]int id)
         {
         }
     }
