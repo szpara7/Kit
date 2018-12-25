@@ -13,8 +13,7 @@ namespace Kit.Data.Tools.NLog
 
         static Log()
         {
-            _logger = new LogFactory().LoadConfiguration("Tools/NLog/nlog.config").GetCurrentClassLogger();
-           
+            _logger = new LogFactory().LoadConfiguration("Tools/NLog/nlog.config").GetCurrentClassLogger();           
         }
 
         #region Error()

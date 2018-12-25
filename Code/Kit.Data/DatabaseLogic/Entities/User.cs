@@ -24,20 +24,7 @@ namespace Kit.Data.DatabaseLogic
         public int? DeletedBy { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime? DateModified { get; set; }
-        public DateTime? DateDeleted { get; set; }
-
-        public static void check()
-        {
-            try
-            {
-                throw new Exception();
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex);
-                throw;
-            }
-        }
+        public DateTime? DateDeleted { get; set; }       
     }
 
     public class UserTypeConfiguration : IEntityTypeConfiguration<User>
