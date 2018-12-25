@@ -14,6 +14,7 @@ namespace Kit.Web.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            Kit.Data.DatabaseLogic.User.check();
             return new string[] { "value1", "value2" };
         }
 

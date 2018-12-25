@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Kit.Data.Tools.NLog;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using System;
@@ -27,8 +28,15 @@ namespace Kit.Data.DatabaseLogic
 
         public static void check()
         {
-
-
+            try
+            {
+                throw new Exception();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                throw;
+            }
         }
     }
 
