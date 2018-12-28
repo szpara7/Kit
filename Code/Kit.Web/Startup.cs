@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Kit.Data.DatabaseLogic;
+using Kit.Data.DatabaseLogic.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +35,10 @@ namespace Kit.Web
                 {
                     t.SuppressModelStateInvalidFilter = true;         
                 });
+            #endregion
+
+            #region DI
+            services.AddTransient<UserService>();
             #endregion
 
             #region Database
