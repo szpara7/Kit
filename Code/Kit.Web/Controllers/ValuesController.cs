@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Kit.Data.Tools.NLog;
+using Kit.Data.Tools.Dispatcher;
+using Kit.Web.Events;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kit.Web.Controllers
@@ -14,7 +15,8 @@ namespace Kit.Web.Controllers
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
-        {                     
+        {
+            Dispatcher.Dispatch(new CounterEvent());
             return new string[] { "value1", "value2" };
         }
 

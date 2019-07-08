@@ -23,7 +23,9 @@ namespace Kit.Data.DatabaseLogic
         public int? DeletedBy { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime? DateModified { get; set; }
-        public DateTime? DateDeleted { get; set; }       
+        public DateTime? DateDeleted { get; set; }   
+        public string UserName { get; set; }
+        public string Password { get; set; }
     }
 
     public class UserTypeConfiguration : IEntityTypeConfiguration<User>
