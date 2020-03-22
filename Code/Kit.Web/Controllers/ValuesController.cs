@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Kit.Data.Tools.NLog;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kit.Web.Controllers
@@ -14,7 +11,7 @@ namespace Kit.Web.Controllers
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
-        {                     
+        {
             return new string[] { "value1", "value2" };
         }
 
